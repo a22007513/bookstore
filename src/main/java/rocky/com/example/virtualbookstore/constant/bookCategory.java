@@ -1,4 +1,4 @@
-package rocky.com.example.virtualbookstore.util;
+package rocky.com.example.virtualbookstore.constant;
 
 public enum bookCategory {
     Fantasy,

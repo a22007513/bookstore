@@ -17,7 +17,7 @@ public class definePredicate {
         List<Predicate> predicateList = new ArrayList<>();
         if(Objects.nonNull(bookSearchCriteria.getBookName())){
             predicateList.add(
-                    ceriterBuilder.like(root.get("book_name"),  "%" + bookSearchCriteria.getBookName() + "%" )
+                    ceriterBuilder.like(root.get("bookName"),  "%" + bookSearchCriteria.getBookName() + "%" )
             );
         }
         if(Objects.nonNull(bookSearchCriteria.getCategeory())){

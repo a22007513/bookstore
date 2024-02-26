@@ -2,7 +2,7 @@ package rocky.com.example.virtualbookstore.module;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import rocky.com.example.virtualbookstore.util.bookCategory;
+import rocky.com.example.virtualbookstore.constant.bookCategory;
 
 import java.util.Date;
 

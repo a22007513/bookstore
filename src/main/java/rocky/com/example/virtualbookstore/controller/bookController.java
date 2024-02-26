@@ -11,12 +11,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 import rocky.com.example.virtualbookstore.dto.bookSearchRequest;
 import rocky.com.example.virtualbookstore.module.bookstore_book;
 import rocky.com.example.virtualbookstore.repository.bookRepository;
 import rocky.com.example.virtualbookstore.service.bookService;
-import rocky.com.example.virtualbookstore.util.bookCategory;
+import rocky.com.example.virtualbookstore.constant.bookCategory;
 
 
 @RestController

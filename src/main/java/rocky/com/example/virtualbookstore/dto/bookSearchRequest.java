@@ -2,7 +2,7 @@ package rocky.com.example.virtualbookstore.dto;
 
 import lombok.Data;
 import org.springframework.data.domain.Sort;
-import rocky.com.example.virtualbookstore.util.bookCategory;
+import rocky.com.example.virtualbookstore.constant.bookCategory;
 
 @Data
 public class bookSearchRequest {
