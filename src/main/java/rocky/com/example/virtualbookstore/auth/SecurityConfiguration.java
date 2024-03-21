@@ -41,6 +41,9 @@ public class SecurityConfiguration  {
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
+    @Autowired
+    private AuthenticationProvider authenticationProvider;
+
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -57,35 +60,9 @@ public class SecurityConfiguration  {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .authenticationProvider(authenticationProvider())
+                .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
-    }
-
-
-    @Bean
-    public UserDetailsService userDetailsService (){
-        return new userService();
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder()
-    {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public AuthenticationProvider authenticationProvider(){
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService());
-        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        authProvider.setPasswordEncoder(passwordEncoder);
-        return authProvider;
-    }
-
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-        return config.getAuthenticationManager();
     }
 
 }
