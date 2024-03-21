@@ -1,4 +1,4 @@
-package rocky.com.example.virtualbookstore.dto;
+package rocky.com.example.virtualbookstore.request;
 
 import lombok.Data;
 import org.springframework.data.domain.Sort;

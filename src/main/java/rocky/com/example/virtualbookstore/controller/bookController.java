@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import rocky.com.example.virtualbookstore.dto.bookSearchRequest;
+import rocky.com.example.virtualbookstore.request.bookSearchRequest;
 import rocky.com.example.virtualbookstore.module.bookstore_book;
 import rocky.com.example.virtualbookstore.repository.bookRepository;
 import rocky.com.example.virtualbookstore.service.bookService;

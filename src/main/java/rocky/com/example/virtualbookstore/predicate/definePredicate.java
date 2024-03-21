@@ -3,7 +3,7 @@ package rocky.com.example.virtualbookstore.predicate;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import rocky.com.example.virtualbookstore.dto.bookSearchRequest;
+import rocky.com.example.virtualbookstore.request.bookSearchRequest;
 import rocky.com.example.virtualbookstore.module.bookstore_book;
 
 import java.util.ArrayList;

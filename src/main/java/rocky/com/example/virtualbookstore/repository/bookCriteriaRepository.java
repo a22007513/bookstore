@@ -5,7 +5,7 @@ import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Repository;
-import rocky.com.example.virtualbookstore.dto.bookSearchRequest;
+import rocky.com.example.virtualbookstore.request.bookSearchRequest;
 import rocky.com.example.virtualbookstore.module.bookstore_book;
 import rocky.com.example.virtualbookstore.predicate.definePredicate;
 
