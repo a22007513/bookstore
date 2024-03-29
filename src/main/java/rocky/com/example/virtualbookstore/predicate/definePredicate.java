@@ -25,6 +25,8 @@ public class definePredicate {
                     ceriterBuilder.equal(root.get("category"),   bookSearchCriteria.getCategeory() )
             );
         }
+        //List.toArray method without parameter List context will become Object
+        //with parameter will make list context become that class
         return ceriterBuilder.and(predicateList.toArray(new Predicate[0]));
     }
 }

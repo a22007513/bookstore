@@ -1,5 +1,6 @@
 package rocky.com.example.virtualbookstore.module;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,8 +18,6 @@ import java.util.List;
 @Entity
 @Table(name="user")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class User  {
 
     @Column(name="user_id")
@@ -29,6 +28,7 @@ public class User  {
     @Column(name="email")
     String email;
 
+    @JsonIgnore
     @Column(name="passwd")
     String password;
 
@@ -40,7 +40,7 @@ public class User  {
 
     //role for granted user authority
     @Column(name="role")
-    //@Enumerated(EnumType.STRING)
-    String role;
+    @Enumerated(EnumType.STRING)
+    Role role;
 
 }

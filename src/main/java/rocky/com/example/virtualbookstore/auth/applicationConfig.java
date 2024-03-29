@@ -9,14 +9,14 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import rocky.com.example.virtualbookstore.service.Impl.userService;
+import rocky.com.example.virtualbookstore.service.Impl.userServiceImpl;
 
 @Configuration
 public class applicationConfig {
 
     @Bean
     public UserDetailsService userDetailsService (){
-        return new userService();
+        return new userServiceImpl();
     }
 
     @Bean
@@ -29,8 +29,7 @@ public class applicationConfig {
     public AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService());
-        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        authProvider.setPasswordEncoder(passwordEncoder);
+        authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }
 

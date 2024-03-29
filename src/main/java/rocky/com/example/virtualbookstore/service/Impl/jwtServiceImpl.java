@@ -35,28 +35,6 @@ public class jwtServiceImpl implements jwtService {
     }
 
 
-    public void deleteUserByid(Integer userid) {
-        userrepository.deleteById(userid);
-    }
-
-
-    public User updateUser(String username,String authorize) {
-            User user = userrepository.findByEmail(username).orElse(null);
-            String role = authorize;
-            user.setRole(role);
-            System.out.println(user);
-            userrepository.save(user);
-            //List<User> updateUser = getUserByEmail(user.getEmail());
-            return user;
-    }
-
-
-    public User createUser(User user) {
-        userrepository.save(user);
-        User newUser = getUserByEmail(user.getEmail());
-        return newUser;
-    }
-
     public String extractUserName(String token) {
         return extractClaim(token,Claims::getSubject);
     }
