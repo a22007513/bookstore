@@ -2,3 +2,7 @@ insert into book (book_name,author,catagory,price,description,stock,`language`,p
 insert into book (book_name,author,catagory,price,description,stock,`language`,publication_date) values ('percy jackson & the olympians the lightning thief','Rick Riordan','Fantasy',212,'first episode of percy jackson',5,'English','2005-06-28 14:00:00')
 insert into book (book_name,author,catagory,price,description,stock,`language`,publication_date) values ('percy jackson & the olympians the sea of monsters','Rick Riordan','Fantasy',212,'first episode of percy jackson',5,'English','2006-07-28 08:00:00')
 insert into book (book_name,author,catagory,price,description,stock,`language`,publication_date) values ('No Rules Rules: Netflix and the Culture of Reinvention','Reed Hastings & Erin Meyer','Biography',399,'Introduction about netflix culture',1,'English','2020-09-08 10:00:00')
+
+
+insert into user (email,passwd,create_date,last_modify_date,role) VALUES ('admin@bookstore.com','$2a$10$v8Ihl6QnZSsriNw.KrGcJeeUgAIqnhZJHhlFQa.WbNHDpcU.hqg8y','2024-02-26 22:02:00','2024-03-29 22:02:00','ROLE_ADMIN')
+insert into user (email,passwd,create_date,last_modify_date,role) VALUES ('user@bookstore.com','$2a$10$K9IcpeF3/pRYhdaerichJ.LFdBEJjbxlawfs8FAWsTBXiBAxPLf6C','2024-02-26 22:02:00','2024-03-28 10:34:00','ROLE_USER')

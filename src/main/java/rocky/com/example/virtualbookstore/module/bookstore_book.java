@@ -6,7 +6,7 @@ import rocky.com.example.virtualbookstore.constant.bookCategory;
 
 import java.util.Date;
 
-@Entity
+@Entity(name = "book")
 @Table(name = "book")
 @Data
 public class bookstore_book {
@@ -14,30 +14,31 @@ public class bookstore_book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "book_id")
-    Integer bookid;
+    private Integer bookid;
 
     @Column(name = "book_name")
-    String bookName;
+    private String bookName;
 
     @Column(name = "author")
-    String author;
+    private String author;
 
     @Column(name = "price")
-    Integer price;
+    private Integer price;
 
     @Column(name = "description")
-    String description;
+    private String description;
 
     @Column(name = "catagory")
     @Enumerated(EnumType.STRING)
-    bookCategory category;
+    private bookCategory category;
 
     @Column(name = "stock")
-    Integer stock;
+    private Integer stock;
 
     @Column(name = "language")
-    String language;
+    private String language;
 
     @Column(name = "publication_date")
-    Date publicationDate;
+    private Date publicationDate;
+
 }

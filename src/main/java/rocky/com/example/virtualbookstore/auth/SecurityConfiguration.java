@@ -49,6 +49,7 @@ public class SecurityConfiguration  {
                         .requestMatchers("/api/auth/user/admin/modifyauthority").hasRole("ADMIN")
                         .requestMatchers("/api/auth/user/**").hasAnyRole("USER","ADMIN")
                         .requestMatchers("/api/auth/v1/**").permitAll()
+                        .requestMatchers("/orderItem/findOrderItem").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement()

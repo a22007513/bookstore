@@ -9,3 +9,12 @@ create  table book if  not exist book(
     `language`         VARCHAR(32)    NOT NULL,
     publication_date TIMESTAMP     NOT NULL
 );
+
+create table if  not exist user(
+    user_id                        INT         NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email                           VARCHAR(750)    NOT NULL UNIQUE,
+    passwd                        VARCHAR(512)    NOT NULL,
+    role                              VARCHAR(128)    NOT NULL,
+    create_date                  TIMESTAMP    NOT NULL,
+    last_modify_date          TIMESTAMP    NOT NULL
+);
